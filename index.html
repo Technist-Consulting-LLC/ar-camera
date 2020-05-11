@@ -1,3 +1,6 @@
+<html>
+  <head>
+    <title></title>
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
@@ -21,7 +24,21 @@
     color: white;
   }
 </style>
+    
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+<!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 
+<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
+
+    <link rel="stylesheet" href="demo-styles.css">
+  </head>
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
@@ -51,3 +68,12 @@
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
+
+  <p>Welcome to the Add 3D Models to the Web with &lt;model-viewer&gt; codelab!</p>
+  <model-viewer src="third_party/Astronaut/Astronaut.glb"
+                auto-rotate camera-controls
+              alt="A 3D model of an astronaut">
+</model-viewer>
+
+</body>
+</html>
